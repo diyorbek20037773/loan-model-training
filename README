@@ -1,0 +1,109 @@
+
+# 💳 Kredit berish Modeli
+
+Bu loyiha foydalanuvchining moliyaviy ma'lumotlari asosida kreditni to‘lashi yoki to‘lamasligini bashorat qiluvchi **Machine Learning** modeli va **Streamlit** asosidagi web ilovadan iborat.
+
+---
+
+## 🧠 Model haqida
+
+Model `CatBoostClassifier` yordamida o‘rgatilgan va quyidagi xususiyatlar asosida bashorat qiladi:
+
+- Kredit summasi (Loan Amount)
+- Yillik daromad (Annual Income)
+- Kredit muddati (Term: Short Term yoki Long Term)
+- Ish tajribasi (Employment Length)
+- Uy egalik turi (Home Ownership)
+- Kredit maqsadi (Purpose)
+- Debt-To-Income nisbati (DTI)
+- So‘nggi 2 yildagi kechikishlar (Delinquent 2yrs)
+- Revolving utilization foizi
+- Umumiy hisoblar soni (Total Accounts)
+- Oxirgi kechikishdan beri o‘tgan oylar
+
+---
+
+## 📦 Fayllar tuzilishi
+
+```
+
+BANK/
+├── app.py                # Streamlit ilovasi
+├── model.pkl             # O'qitilgan CatBoost modeli
+├── requirements.txt      # Loyihani ishga tushirish uchun kutubxonalar
+└── README.md             # Loyihaning hujjat fayli (shu fayl)  YANA BOSHQA APPLAR HAM BOR
+
+````
+
+---
+
+## 🚀 Ishga tushirish
+
+### 1. Klonlash
+
+```bash
+cd BANK
+````
+
+### 2. Virtual muhit yaratish (ixtiyoriy)
+
+```bash
+python -m venv venv
+source venv/bin/activate    # Linux/macOS
+venv\Scripts\activate       # Windows
+```
+
+### 3. Kutubxonalarni o‘rnatish
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Streamlit ilovasini ishga tushirish
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🖼 Ilova interfeysi
+
+* Foydalanuvchi kerakli ma'lumotlarni kiritadi
+* Tugmani bosgach, model kredit to‘lanadimi yoki yo‘qmi — shuni taxmin qiladi
+* Natija ehtimol bilan birga chiqadi
+
+---
+
+## 🛡 Xavfsizlik va Foydalanish
+
+* Model `joblib` orqali `.pkl` shaklida saqlangan
+* Kodingizni ommaviy qilishdan oldin **model sir saqlanadigan bo‘lsa — repository'ni private** qilib qo‘ying
+* Sotiladigan xizmatlarda foydalanish uchun API variantlarini (masalan `FastAPI`) ko‘rib chiqish mumkin
+
+---
+
+## ✨ Kelajakdagi rejalaringiz (optional)
+
+* 🔒 JWT bilan tokenli autentifikatsiya (agar deploy qilinsa)
+* ☁️ Render / HuggingFace Spaces / AWS Sagemaker'da deploy
+* 📊 Admin panel yoki monitoring tizimi
+
+---
+
+## 🤝 Muallif
+
+**Diyorbek IBRAGIMOV**
+Loyiha, savollar yoki hamkorlik uchun: diyorbek20037377@gmail.com`
+
+---
+
+## 📄 Litsenziya
+
+Bu loyiha shaxsiy maqsadlar uchun yaratilgan. Tijorat maqsadida foydalanishdan oldin muallif bilan bog‘laning.
+
+```
+
+---
+
+
